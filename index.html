@@ -404,13 +404,10 @@
 					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<div class="contact-form">
 							<h3>Diga oi!</h3>
-							<form action="#" id="contact-form">
+							<form action="https://formspree.io/f/xoqppoby" method="POST" id="contact-form">
 								<div class="input-group name-email">
 									<div class="input-field">
-										<input type="text" name="name" id="name" placeholder="Nome" class="form-control">
-									</div>
-									<div class="input-field">
-										<input type="email" name="email" id="email" placeholder="Email" class="form-control">
+										<input type="email" name="_replyto" id="email" placeholder="Email" class="form-control">
 									</div>
 								</div>
 								<div class="input-group">
@@ -555,39 +552,40 @@
 				/*	Contact Form
 				/* ========================================================================= */
 				
-				$('#contact-form').validate({
-					rules: {
-						name: {
-							required: true,
-							minlength: 5
-						},
-						email: {
-							required: true,
-							email: true
-						},
-						message: {
-							required: true
-						}
-					},
-					messages: {
-						name: {
-							required: "sério?, você não tem nome?",
-							minlength: "o seu nome precisa ter pelo menos 05 letras"
-						},
-						email: {
-							required: "email não informado"
-						},
-						message: {
-							required: "um...ok, você precisa escrever alguma coisa para enviar esta mensagem.",
-							minlength: "me ajude! descreva só mais um pouquinho."
-						}
-					},
-					submitHandler: function(form) {
-    					var link = 'mailto:contato@ozielguimaraes.net?subject=Preciso de um especialista [' + document.getElementById('email').value + ']'
-						+ '&body=Olá, Meu nome é ' + document.getElementById('name').value + '. ' +document.getElementById('message').value;
-			 			window.location.href = link;
-					}
-				});
+				// $('#contact-form').validate({
+				// 	rules: {
+				// 		name: {
+				// 			required: true,
+				// 			minlength: 5
+				// 		},
+				// 		email: {
+				// 			required: true,
+				// 			email: true
+				// 		},
+				// 		message: {
+				// 			required: true
+				// 		}
+				// 	},
+				// 	messages: {
+				// 		name: {
+				// 			required: "sério?, você não tem nome?",
+				// 			minlength: "o seu nome precisa ter pelo menos 05 letras"
+				// 		},
+				// 		email: {
+				// 			required: "email não informado"
+				// 		},
+				// 		message: {
+				// 			required: "um...ok, você precisa escrever alguma coisa para enviar esta mensagem.",
+				// 			minlength: "me ajude! descreva só mais um pouquinho."
+				// 		}
+				// 	},
+				// 	submitHandler: function(form) {
+    			// 		var link = 'mailto:contato@ozielguimaraes.net?subject=Preciso de um especialista [' + document.getElementById('email').value + ']'
+				// 		+ '&body=Olá, Meu nome é ' + document.getElementById('name').value + '. ' +document.getElementById('message').value;
+			 	// 		window.location.href = link;
+				// 	}
+				// });
+			
 			});
 		</script>
     </body>
